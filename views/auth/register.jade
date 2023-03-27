@@ -1,0 +1,36 @@
+extends ../includes
+
+block content
+    .container 
+        .row
+            .col 
+            .col(style="padding-top: 10vh")
+                .card(style="height: 70vh;") 
+                    .card-header 
+                        span.fs-5 註冊 | Register
+                    .card-body
+                        form(action="/auth/register" method="post")
+                            .row.g-3.align-items-center 
+                                .col-auto 
+                                    label.col-form-control(for="username")
+                                        span.fs-6 帳號: 
+                                .col
+                                    input#username.form-control(type="text" placeholder="Username ... ")
+                                
+                            .row.g-3.align-items-center(style="margin-top: 10px;") 
+                                .col-auto 
+                                    label.col-form-control(for="password")
+                                        span.fs-6 密碼: 
+                                .col
+                                    input#password.form-control(type="password" placeholder="Password ... ")
+
+                            .row.g-3.align-items-center(style="margin-top: 10px;") 
+                                .col-auto 
+                                    label.col-form-control(for="passwordAgain")
+                                        span.fs-6 密碼: 
+                                .col
+                                    input#passwordAgain.form-control(type="password" placeholder="Password Again ... ")
+
+                            .row.g-3.align-items-center(style="margin-top: 10px;")
+                                button.btn.btn-outline-dark(type="submit") 註冊
+            .col 

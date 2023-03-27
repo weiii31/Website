@@ -1,0 +1,20 @@
+header.navbar.navbar-expand-sm.navbar-dark(style="margin-top: 1%; margin-left: 1%;")
+    .container-fluid 
+        a.navbar-brand.fs-4(href="/" id="brand_font") 雷擊預警防護監控系統
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarDropDown" aria-controls="navbarDropDown" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarDropDown 
+            ul.navbar-nav 
+                li.nav-item
+                    a.nav-link.fs-5(href="/") 首頁
+                li.nav-item 
+                    a.nav-link.fs-5(href="#") 站點資訊
+                li.nav-item 
+                    a.nav-link.fs-5(href="#") 即時閃電
+                li.nav-item 
+                    a.nav-link.fs-5(href="#") 歷史資料
+                li.nav-item 
+                    a.nav-link.fs-5(href="#") 聯落我們
+        if username != '#'
+            a.btn.btn-secondary#usernameBtn(type="button") #{username}
+
