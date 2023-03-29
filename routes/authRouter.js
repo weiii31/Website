@@ -1,23 +1,12 @@
 const router = require('express').Router()
-const db_ = require('../middlewares/db')
-const db = new db_.db()
+const { login, loginPage, registerPage, register } = require('../controllers/auth')
 
 router.route('/login')
-    .get((req, res) => {
-        res.render('auth/login', { username: '#' })
-    })
-    .post((req, res) => {
-        const uname = req.body.username
-        const upass = req.body.password
-
-    })
+    .get(loginPage)
+    .post(login)
 
 router.route('/register')
-    .get((req, res) => {
-        res.render('auth/register', {username: '#'})
-    })
-    .post((req, res) => {
+    .get(registerPage)
+    .post(register)
 
-    })
-
-module.exports = router
+module.exports= router

@@ -15,3 +15,4 @@ sudo npm install -g npm
 npm install
 
 # Install MySQL
+sudo apt install mysql-server -y
